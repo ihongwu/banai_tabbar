@@ -1,6 +1,6 @@
 name: banai_tabbar
 description: This plug-in is designed to solve the problem of jitter in enlarging and reducing the tabbar font of flutter.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/ihongwu/banai_tabbar
 
 environment:
