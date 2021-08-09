@@ -17,13 +17,14 @@ class _MyAppState extends State<MyApp>  with AutomaticKeepAliveClientMixin,Singl
   bool get wantKeepAlive => true;
   late TabController _tabConroller;
   List tablist = [
+    '推荐',
     '娱乐',
     '体育',
     '军事',
     '国际',
     '科技',
     '汽车',
-    '我关注的'
+    '我关注的',
   ];
 
   @override

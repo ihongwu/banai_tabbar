@@ -6,6 +6,9 @@ This plug-in is designed to solve the problem of jitter in enlarging and reducin
 3、The fontSize property of unselectedLabelStyle must be greater than 0  
 4、labelFontSize replaces the fontSize property of labelStyle
 
+## Preview
+https://user-images.githubusercontent.com/21274377/128660549-64f90736-beb6-4ab4-b45e-fd4245765c79.mp4
+
 ## Getting Started
 Add dependency
 ```
