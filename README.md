@@ -1,8 +1,8 @@
 # banai_tabbar
 This plug-in is designed to solve the problem of jitter in enlarging and reducing the tabbar font of flutter.
 
-1、The fontSize property of labelStyle cannot be set
-2、The fontSize property of unselectedLabelStyle must be set
+1、The fontSize property of labelStyle cannot be set 
+2、The fontSize property of unselectedLabelStyle must be set d
 3、The fontSize property of unselectedLabelStyle must be greater than 0
 
 ## Getting Started
