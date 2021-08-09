@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart' show DragStartBehavior;
+
+typedef OnChange = void Function(int index);
+typedef OnAnimatedChange = void Function(double animateValue,double diff);
+
 class BanaiTabbar extends StatefulWidget {
   
   const BanaiTabbar({
@@ -7,6 +11,8 @@ class BanaiTabbar extends StatefulWidget {
     required this.tabs,
     required this.controller,
     required this.labelFontSize,
+    this.onChange,
+    this.onAnimatedChange,
     this.isScrollable = false,
     this.indicatorColor,
     this.automaticIndicatorColorAdjustment = true,
@@ -46,6 +52,10 @@ class BanaiTabbar extends StatefulWidget {
 
 
   final double labelFontSize;
+
+  final OnChange ? onChange;
+
+  final OnAnimatedChange ? onAnimatedChange;
 
   /// Whether this tab bar can be scrolled horizontally.
   ///
@@ -246,10 +256,18 @@ class _BanaiTabbarState extends State<BanaiTabbar> {
     widget.controller!.addListener(() {
       currentIndex = widget.controller!.index;
       updateTabviewAnimateValue(widget.controller!.animation!.value);
+      if(widget.onChange != null) widget.onChange!(currentIndex);
     });
     widget.controller!.animation!.addListener(() {
       updateTabviewAnimateValue(widget.controller!.animation!.value);
     });
+  }
+
+  @override
+  void dispose() {
+    widget.controller!.animation!.removeListener((){});
+    widget.controller!.removeListener((){});
+    super.dispose();
   }
   @override
   Widget build(BuildContext context) {
@@ -317,6 +335,8 @@ class _BanaiTabbarState extends State<BanaiTabbar> {
     if(diff == 0) {
       nextInddex = -1;
     }
+
+    if(widget.onAnimatedChange != null) widget.onAnimatedChange!(newValue,diff);
     setState(() {});
   }
 }

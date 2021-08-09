@@ -9,6 +9,12 @@ This plug-in is designed to solve the problem of jitter in enlarging and reducin
 ## Preview
 <video src="https://user-images.githubusercontent.com/21274377/128660549-64f90736-beb6-4ab4-b45e-fd4245765c79.mp4" controls="controls" width="800" preload="auto">您的浏览器不支持播放该视频！</video>
 
+
+## Video link
+`
+https://user-images.githubusercontent.com/21274377/128660549-64f90736-beb6-4ab4-b45e-fd4245765c79.mp4
+`
+
 ## Getting Started
 Add dependency
 ```
@@ -23,14 +29,20 @@ BanaiTabbar(
 	isScrollable: true,
 	indicator: const BoxDecoration(),
 	unselectedLabelColor:Colors.black38,
-	labelColor:Colors.black,
+	labelColor:Colors.pinkAccent,
 	unselectedLabelStyle: TextStyle(
 		fontSize: 16,
 	),
-	labelFontSize: 20,
+	labelFontSize: 30,
+	onChange: (int currentIndex){
+		print(currentIndex);
+	},
+	onAnimatedChange: (double animatedValue,double diff){
+		print("animatedValue:$animatedValue   diff:$diff");
+	},
 	tabs: [
 		for (var i = 0; i < tablist.length; i++) 
-			Text(tablist[i])
+		Text(tablist[i])
 	],
 ),
 ```

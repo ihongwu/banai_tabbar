@@ -56,6 +56,12 @@ class _MyAppState extends State<MyApp>  with AutomaticKeepAliveClientMixin,Singl
                   fontSize: 16,
                 ),
                 labelFontSize: 30,
+                onChange: (int currentIndex){
+                  print(currentIndex);
+                },
+                onAnimatedChange: (double animatedValue,double diff){
+                  print("animatedValue:$animatedValue   diff:$diff");
+                },
                 tabs: [
                   for (var i = 0; i < tablist.length; i++) 
                     Text(tablist[i])
