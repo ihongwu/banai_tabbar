@@ -7,9 +7,7 @@ This plug-in is designed to solve the problem of jitter in enlarging and reducin
 4、labelFontSize replaces the fontSize property of labelStyle
 
 ## Preview
-<video id="video" controls="controls" preload="auto">
-  <source id="mp4" src="https://user-images.githubusercontent.com/21274377/128660549-64f90736-beb6-4ab4-b45e-fd4245765c79.mp4" type="video/mp4">
-</video> 
+<video src="https://user-images.githubusercontent.com/21274377/128660549-64f90736-beb6-4ab4-b45e-fd4245765c79.mp4" controls="controls" width="800" preload="auto">您的浏览器不支持播放该视频！</video>
 
 ## Getting Started
 Add dependency
