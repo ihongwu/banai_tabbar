@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/banai_tabbar.iml" filepath="$PROJECT_DIR$/banai_tabbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/banai_tabbar_android.iml" filepath="$PROJECT_DIR$/android/banai_tabbar_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/banai_tabbar_example_android.iml" filepath="$PROJECT_DIR$/example/android/banai_tabbar_example_android.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,22 @@
+PODS:
+  - banai_tabbar (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - banai_tabbar (from `.symlinks/plugins/banai_tabbar/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  banai_tabbar:
+    :path: ".symlinks/plugins/banai_tabbar/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  banai_tabbar: 9447df7e8bc5da9b2790cfae5e50f9828c822c5f
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.1
