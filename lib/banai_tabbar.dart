@@ -249,6 +249,10 @@ class _BanaiTabbarState extends State<BanaiTabbar> {
       throw 'The fontSize property of unselectedLabelStyle must be greater than 0';
     }
 
+    //  初始化当前值
+    currentIndex = widget.controller!.index;
+    nextInddex = currentIndex;
+
     proportion = (widget.labelFontSize-widget.unselectedLabelStyle!.fontSize!) / widget.unselectedLabelStyle!.fontSize!;
 
     // print(widget.unselectedLabelStyle!.fontSize! + (widget.unselectedLabelStyle!.fontSize! * proportion));
@@ -297,6 +301,7 @@ class _BanaiTabbarState extends State<BanaiTabbar> {
 
 
   List<Widget> getTabsWidget(List<Widget> tabs){
+    print(currentIndex);
     List<Widget> tabWidgetList = [];
     for (var i = 0; i < tabs.length; i++) {
       // 默认显示一倍
@@ -304,9 +309,12 @@ class _BanaiTabbarState extends State<BanaiTabbar> {
       double showProportion = defalutProportion;
       if(currentIndex == i) {
         showProportion  = defalutProportion + (proportion - proportion * diff);
+        print("Iii:$i   showProportion:$showProportion");
+        
       }
       if(nextInddex == i) {
         showProportion  = defalutProportion + (proportion * diff);
+        print("I:$i   showProportion:$showProportion");
       }
       if(showProportion < 0) {
         showProportion = 0;
