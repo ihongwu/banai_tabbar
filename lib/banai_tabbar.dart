@@ -301,7 +301,6 @@ class _BanaiTabbarState extends State<BanaiTabbar> {
 
 
   List<Widget> getTabsWidget(List<Widget> tabs){
-    print(currentIndex);
     List<Widget> tabWidgetList = [];
     for (var i = 0; i < tabs.length; i++) {
       // 默认显示一倍
@@ -309,12 +308,10 @@ class _BanaiTabbarState extends State<BanaiTabbar> {
       double showProportion = defalutProportion;
       if(currentIndex == i) {
         showProportion  = defalutProportion + (proportion - proportion * diff);
-        print("Iii:$i   showProportion:$showProportion");
         
       }
       if(nextInddex == i) {
         showProportion  = defalutProportion + (proportion * diff);
-        print("I:$i   showProportion:$showProportion");
       }
       if(showProportion < 0) {
         showProportion = 0;

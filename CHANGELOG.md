@@ -1,3 +1,7 @@
+## 1.0.21
+
+* delete print
+
 ## 1.0.2
 
 * 修复initialIndex大于0时，显示不正确的问题
