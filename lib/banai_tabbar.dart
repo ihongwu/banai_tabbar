@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart' show DragStartBehavior;
 
 typedef OnChange = void Function(int index);
-typedef OnAnimatedChange = void Function(double animateValue,double diff);
+typedef OnAnimatedChange = void Function(double animateValue,double diff,int currentIndex,int nextInddex);
 
 class BanaiTabbar extends StatefulWidget {
   
@@ -341,7 +341,7 @@ class _BanaiTabbarState extends State<BanaiTabbar> {
       nextInddex = -1;
     }
 
-    if(widget.onAnimatedChange != null) widget.onAnimatedChange!(newValue,diff);
+    if(widget.onAnimatedChange != null) widget.onAnimatedChange!(newValue,diff,currentIndex,nextInddex);
     setState(() {});
   }
 }

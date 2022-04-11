@@ -59,8 +59,8 @@ class _MyAppState extends State<MyApp>  with AutomaticKeepAliveClientMixin,Singl
                 onChange: (int currentIndex){
                   print(currentIndex);
                 },
-                onAnimatedChange: (double animatedValue,double diff){
-                  print("animatedValue:$animatedValue   diff:$diff");
+                onAnimatedChange: (double animatedValue,double diff,int currentIndex,int nextInddex){
+                  print("animatedValue:$animatedValue   diff:$diff   currentIndex:$currentIndex   nextInddex:$nextInddex");
                 },
                 tabs: [
                   for (var i = 0; i < tablist.length; i++) 
