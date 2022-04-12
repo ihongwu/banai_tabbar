@@ -37,8 +37,8 @@ BanaiTabbar(
 	onChange: (int currentIndex){
 		print(currentIndex);
 	},
-	onAnimatedChange: (double animatedValue,double diff){
-		print("animatedValue:$animatedValue   diff:$diff");
+	onAnimatedChange: (double animatedValue,double diff,int currentIndex,int nextInddex){
+		print("animateValue:$animateValue  diff:$diff   currentIndex:$currentIndex   nextInddex:$nextInddex");
 	},
 	tabs: [
 		for (var i = 0; i < tablist.length; i++) 

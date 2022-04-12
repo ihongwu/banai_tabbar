@@ -1,3 +1,9 @@
+## 1.0.31
+
+* update readme
+
+
+
 ## 1.0.3
 
 * onAnimatedChange 回调函数增加currentIndex和nextInddex参数返回
